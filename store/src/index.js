@@ -8,11 +8,25 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App/>,
+  },
+  {
+    path: "/category/:id",
+    element: <div>Category</div>,
+  },
+  {
+    path: "/product/:id",
+    element: <div>Product</div>
+  },
+]);
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
-    {/* <RouterProvider router={router} /> */}
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
