@@ -27,7 +27,7 @@ const router = createBrowserRouter([
     children:[
       {
         path: "/",
-        element: <div>Home</div>,
+        element: <App/>,
       },
       {
         path: "/category/:id",
