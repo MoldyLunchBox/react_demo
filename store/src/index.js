@@ -6,21 +6,40 @@ import reportWebVitals from './reportWebVitals';
 import {
   createBrowserRouter,
   RouterProvider,
+  Outlet,
 } from "react-router-dom";
+import { Header } from './component/Header';
+import { Footer } from './component/Footer';
 
+const Layout = () =>{
+  return (
+    <div>
+      <Header/>
+      <Outlet/>
+      <Footer/>
+    </div>
+  )
+}
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <Layout/>,
+    children:[
+      {
+        path: "/",
+        element: <div>Home</div>,
+      },
+      {
+        path: "/category/:id",
+        element: <div>Category</div>,
+      },
+      {
+        path: "/product/:id",
+        element: <div>Product</div>
+      },
+    ]
   },
-  {
-    path: "/category/:id",
-    element: <div>Category</div>,
-  },
-  {
-    path: "/product/:id",
-    element: <div>Product</div>
-  },
+  
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
