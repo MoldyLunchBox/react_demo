@@ -1,14 +1,16 @@
 import React from 'react'
 
 export const FeaturedCard = ({ product }) => {
-    return (
-        <div key={product.id} className=' flex flex-col' >
-            <div style={{
-                background: url("foo.jpg")
-            }}>
+    const switchImageEffect = {
 
-                <img className='hover:hidden object-contain  ' src={product.image1} />
-                <img className='hover:flex object-contain hidden' src={product.image2} />
+    }
+    return (
+        <div key={product.id} className=' flex  flex-col' >
+            <div className='wrapper'>
+                <div className='img-area'>
+                    <img className='img-back ' src={product.image1} />
+                    <img className='img-front' src={product.image2} />
+                </div>
             </div>
             <div className='flex flex-col'>
                 <h2>{product.name}</h2>

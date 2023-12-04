@@ -27,6 +27,14 @@ export const FeaturedProducts = ({ title }) => {
             oldPrice: 5,
             price: 10,
         },
+        {
+            name: "jean tshirt",
+            image1: "https://images.pexels.com/photos/837140/pexels-photo-837140.jpeg?auto=compress&cs=tinysrgb&w=1600",
+            image2: "",
+            id: 3,
+            oldPrice: 5,
+            price: 10,
+        },
     ];
 
 
