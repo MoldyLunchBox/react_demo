@@ -42,21 +42,15 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* 
 .wrapper {
   position: absolute;
 } */
 
-
-
-
 .img-area img {
   position: absolute;
   transition: opacity 1s ease-in-out;
 }
-
-
 
 .img-area img.img-front:hover {
   opacity: 0;
