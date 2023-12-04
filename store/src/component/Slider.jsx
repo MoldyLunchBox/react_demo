@@ -1,14 +1,13 @@
 import React, { useState } from 'react'
-import { Carousel } from "@material-tailwind/react";
-
-
-
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
 export const Slider = () => {
     const images = [
-        "https://images.pexels.com/photos/52518/jeans-pants-blue-shop-52518.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-        "https://images.pexels.com/photos/1598507/pexels-photo-1598507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-        "https://images.pexels.com/photos/1138560/pexels-photo-1138560.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-        "https://images.pexels.com/photos/4210866/pexels-photo-4210866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "https://images.pexels.com/photos/981619/pexels-photo-981619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "https://images.pexels.com/photos/1082528/pexels-photo-1082528.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "https://images.pexels.com/photos/1804075/pexels-photo-1804075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "https://images.pexels.com/photos/1667506/pexels-photo-1667506.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     ]
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -21,21 +20,36 @@ export const Slider = () => {
     }
 
     return (
-        <div className='max-w-[500px] h-[500px]'>
-            <div className="relative flex justify-center items-center  w-full h-full bg-red-200">
-                <div className="flex justify-between absolute w-full top-1/2 transform -translate-y-1/2">
-                    <button onClick={prevSlide} className="text-white bg-gray-800 p-2 rounded-full focus:outline-none">
-                        Prev
-                    </button>
-                    <button onClick={nextSlide} className="text-white bg-gray-800 p-2 rounded-full focus:outline-none">
-                        Next
-                    </button>
+        <div className="relative flex justify-center items-center overflow-hidden  w-full h-full bg-red-200">
+
+            <div className='flex flex-row  w-full transition-transform ease-out duration-500  h-full ' style={{ transform: `translate(-${currentIndex * 100}%)` }}>
+                {images.map((image) => {
+                    return <img
+                        key={image}
+                        src={image}
+                        alt={`Slide ${currentIndex}`}
+                        className=" "
+                    />
+                })}
+            </div>
+
+
+            <div className="flex justify-between absolute w-full  h-full top-1/2 transform -translate-y-1/2">
+                <button onClick={prevSlide} className="transition ease-in-out delay-150 text-black hover:bg-opacity-25 hover:bg-gray-400 p-2 focus:outline-none">
+                    <ArrowBackIosIcon />
+                </button>
+                <button onClick={nextSlide} className="transition ease-in-out delay-150 text-black hover:bg-opacity-25 hover:bg-gray-400 p-2 focus:outline-none">
+                    <ArrowForwardIosIcon />
+                </button>
+            </div>
+            <div className="absolute bottom-4 left-0 right-0">
+                <div className="flex justify-center items-center gap-2">
+                    {images.map((_, i) => (
+                        <div className={`w-3 h-3 bg-black border-2 border-white rounded-full ${i == currentIndex ? "p-2" : "bg-opacity-50"}`}>
+
+                        </div>
+                    ))}
                 </div>
-                <img
-                    src={images[currentIndex]}
-                    alt={`Slide ${currentIndex}`}
-                    className="object-cover w-auto h-[500px] transition-opacity duration-500 ease-in-out"
-                />
             </div>
         </div>
     )
