@@ -50,6 +50,8 @@
 .img-area img {
   position: absolute;
   transition: opacity 1s ease-in-out;
+  top: 0;
+  right: 0;
 }
 
 .img-area img.img-front:hover {

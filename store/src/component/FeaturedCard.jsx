@@ -5,8 +5,8 @@ export const FeaturedCard = ({ product }) => {
 
     }
     return (
-        <div key={product.id} className=' flex  flex-col' >
-            <div className='img-area overflow-hidden'>
+        <div key={product.id} className='w-[200px] flex relative flex-col' >
+            <div className='img-area h-[133px]'>
                 <img className='img-back max-w-[200px]' src={product.image1} />
                 <img className='img-front ' src={product.image2} />
             </div>
