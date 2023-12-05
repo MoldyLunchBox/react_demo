@@ -13,7 +13,7 @@ import { Footer } from './component/Footer';
 
 const Layout = () =>{
   return (
-    <div>
+    <div className='container mx-auto'>
       <Header/>
       <Outlet/>
       <Footer/>

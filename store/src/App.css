@@ -41,12 +41,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* 
-.wrapper {
-  position: absolute;
-} */
-
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:regular,bold,italic&subset=latin,latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 .img-area img {
   position: absolute;
   transition: opacity 1s ease-in-out;
@@ -57,4 +54,20 @@
 .img-area img.img-front:hover {
   opacity: 0;
   cursor: pointer;
+}
+
+.montserratFont {
+  font-family: 'montserrat',  ;
+
+}
+
+.playFairFont{
+  font-family: 'Playfair Display'
+}
+.nunitoFont{
+  font-family: 'Nunito'
+}
+.svg_icons {
+  transform: scale(1.8);
+  color: #219D80;
 }

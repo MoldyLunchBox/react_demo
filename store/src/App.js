@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { Slider } from './component/Slider';
 import { FeaturedProducts } from './component/FeaturedProducts';
+import { OurMission } from './component/OurMission';
 
 const dataTrending = [
   {
@@ -110,8 +111,12 @@ function App() {
   return (
     <div>
      <Slider />
+     <div className='space-y-10 '>
+
      <FeaturedProducts data={dataTrending} title="Trending Products"/>
      <FeaturedProducts data={dataFeatured} title="Featured Products"/>
+     <OurMission />
+     </div>
     </div>
   );
 }
