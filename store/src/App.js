@@ -3,7 +3,8 @@ import './App.css';
 import { Slider } from './component/Slider';
 import { FeaturedProducts } from './component/FeaturedProducts';
 import { OurMission } from './component/OurMission';
-
+import { useEffect, useState } from 'react';
+import axios from "axios"
 const dataTrending = [
   {
       name: "jean tshirt",
@@ -108,6 +109,27 @@ const dataFeatured = [
 ];
 
 function App() {
+    const [products, setProducts] = useState([])
+    useEffect(()=>{
+        const fetchData = async ()=>{
+            try {
+                const res = await axios.get(process.env.REACT_APP_API_URL + "products", {
+                    headers :{
+                        Authorization: "bearer " + process.env.REACT_APP_API_TOKEN
+                    }
+                })
+                setProducts(res.data.data)
+            }
+            catch (err){
+                console.log(err)
+            }
+
+        }
+        fetchData()
+    },[])
+    useEffect(()=>{
+        console.log(products)
+    },[products])
   return (
     <div>
      <Slider />
