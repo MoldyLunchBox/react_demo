@@ -10,7 +10,7 @@ export const OurMission = () => {
     const greenHand = <img src="handGreen.svg" className='w-7' alt="/" />;
     const moneyHand = <img src="handMoney.svg" className='w-7' alt="/" />;
     return (
-        <div className='mx-10'>
+        <div className='md:mx-10'>
             <div className=' mb-2 inline-flex items-center justify-center'>
                 <h2 className='montserratFont font-medium
                  text-lg  '>
@@ -21,7 +21,7 @@ export const OurMission = () => {
             <h2 className='mx-2 playFairFont text-4xl font-medium'>
                 Save Jeans. Save Lives
             </h2>
-            <div className='flex gap-2'>
+            <div className='flex  sm:flex-row   md:gap-2'>
                 <MisisonCard name="Save Jeans Responsibly" cardBody={cardBody1} mainColor={true} icon={<CheckroomIcon className="svg_icons" />}  isbutton={false} />
                 <MisisonCard name="Environmental Impact" cardBody={cardBody2} mainColor={false} icon={greenHand}  isbutton={false} />
                 <MisisonCard name="Lifesaving Impact" cardBody={cardBody3} mainColor={false} icon={moneyHand}   isbutton={true} />

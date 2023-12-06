@@ -118,7 +118,7 @@ function App() {
 
                 <FeatureProducts data={dataTrending} type="trending" title="Trending Products" />
                 <FeatureProducts data={dataFeatured} type="featured" title="Featured Products"/>
-                {/* <OurMission /> */}
+                <OurMission />
             </div>
         </div>
     );

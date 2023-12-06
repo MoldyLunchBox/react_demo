@@ -683,6 +683,7 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
     singularName: 'category';
     pluralName: 'categories';
     displayName: 'category';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -748,6 +749,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
       'api::sub-category.sub-category'
     >;
     type: Attribute.Enumeration<['trending', 'featured']>;
+    discount: Attribute.Integer & Attribute.DefaultTo<0>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

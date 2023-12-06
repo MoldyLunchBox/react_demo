@@ -65,6 +65,10 @@
         "trending",
         "featured"
       ]
+    },
+    "discount": {
+      "type": "integer",
+      "default": 0
     }
   }
 }

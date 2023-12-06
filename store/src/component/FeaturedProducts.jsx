@@ -23,9 +23,6 @@ useEffect(()=>{
     fetchData()
 },[])
 
-useEffect(()=>{
-console.log(products)
-},[products])
 
     return (
         <div className='flex flex-col  my-5'>
