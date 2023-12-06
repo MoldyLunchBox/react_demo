@@ -4,7 +4,8 @@ import { Slider } from './component/Slider';
 import { FeaturedProducts } from './component/FeaturedProducts';
 import { OurMission } from './component/OurMission';
 import { useEffect, useState } from 'react';
-import axios from "axios"
+import axiosInstance from './requests/axiosInstance'; // Importing custom Axios instance
+
 const dataTrending = [
   {
       name: "jean tshirt",
@@ -109,34 +110,14 @@ const dataFeatured = [
 ];
 
 function App() {
-    const [products, setProducts] = useState([])
-    useEffect(()=>{
-        const fetchData = async ()=>{
-            try {
-                const res = await axios.get(process.env.REACT_APP_API_URL + "products", {
-                    headers :{
-                        Authorization: "bearer " + process.env.REACT_APP_API_TOKEN
-                    }
-                })
-                setProducts(res.data.data)
-            }
-            catch (err){
-                console.log(err)
-            }
 
-        }
-        fetchData()
-    },[])
-    useEffect(()=>{
-        console.log(products)
-    },[products])
   return (
     <div>
      <Slider />
      <div className='space-y-10 '>
 
-     <FeaturedProducts data={dataTrending} title="Trending Products"/>
-     <FeaturedProducts data={dataFeatured} title="Featured Products"/>
+     <FeaturedProducts data={dataTrending} type="trending" title="Trending Products"/>
+     {/* <FeaturedProducts data={dataFeatured} type="featured" title="Featured Products"/> */}
      <OurMission />
      </div>
     </div>
