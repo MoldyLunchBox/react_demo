@@ -1,12 +1,14 @@
 import React from 'react'
 
+
 export const FeaturedCard = ({ product }) => {
-    console.log(product.img.data.attributes.url)
     return (
-        <div key={product.id} className='w-[200px] flex relative flex-col' >
-            <div className='img-area h-[133px]'>
-                <img className='img-back max-w-[200px]' src={process.env.REACT_APP_UPLOAD_URL + product.img.data.attributes.url} />
-                <img className='img-front ' src={process.env.REACT_APP_UPLOAD_URL + product.img2.data.attributes.url} />
+        <div key={product.id} className='w-[200px] mb-10 flex flex-col' >
+            <div className='h-[200px]'>
+
+                <div className='flex '>
+                    <img className='max-h-[200px]' src={process.env.REACT_APP_UPLOAD_URL + product.img.data.attributes.url} />
+                </div>
             </div>
             <div className='flex flex-col'>
                 <h2>{product.title}</h2>

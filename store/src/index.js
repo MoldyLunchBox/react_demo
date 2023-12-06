@@ -11,23 +11,25 @@ import {
 import { Header } from './component/Header';
 import { Footer } from './component/Footer';
 
-const Layout = () =>{
+const Layout = () => {
   return (
     <div className='mx-auto'>
-      <Header/>
-      <Outlet/>
-      <Footer/>
+      <Header />
+      <div className='flex flex-col justify-center items-center'>
+        <Outlet />
+      </div>
+      <Footer />
     </div>
   )
 }
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout/>,
-    children:[
+    element: <Layout />,
+    children: [
       {
         path: "/",
-        element: <App/>,
+        element: <App />,
       },
       {
         path: "/category/:id",
@@ -39,12 +41,12 @@ const router = createBrowserRouter([
       },
     ]
   },
-  
+
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <RouterProvider router={router} />
+  <RouterProvider router={router} />
 );
 
 // If you want to start measuring performance in your app, pass a function
