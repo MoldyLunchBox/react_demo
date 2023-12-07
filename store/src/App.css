@@ -73,3 +73,12 @@
   transform: scale(1.8);
   color: #219D80;
 }
+
+
+.img-slider img {
+  display: block;
+  max-width:1000px;
+  max-height:681px;
+  width: auto;
+  height: auto;
+}

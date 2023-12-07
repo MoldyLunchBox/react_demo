@@ -4,10 +4,10 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
 export const Slider = () => {
     const images = [
-        "https://images.pexels.com/photos/981619/pexels-photo-981619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-        "https://images.pexels.com/photos/1082528/pexels-photo-1082528.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-        "https://images.pexels.com/photos/1804075/pexels-photo-1804075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-        "https://images.pexels.com/photos/1667506/pexels-photo-1667506.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "slider-1.jpg",
+        "slider-2.jpg",
+        "slider-3.jpg",
+        "slider-4.jpg",
     ]
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -22,7 +22,7 @@ export const Slider = () => {
     return (
         <div className="relative flex justify-center items-center overflow-hidden  w-full h-full bg-red-200">
 
-            <div className='flex flex-row  w-full transition-transform ease-out duration-500  h-full ' style={{ transform: `translate(-${currentIndex * 100}%)` }}>
+            <div className='flex flex-row img-slider w-full transition-transform ease-out duration-500  h-full ' style={{ transform: `translate(-${currentIndex * 100}%)` }}>
                 {images.map((image) => {
                     return <img
                         key={image}
