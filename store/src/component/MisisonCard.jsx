@@ -1,7 +1,7 @@
 import React from 'react'
 export const MisisonCard = ({ icon, name, cardBody, mainColor, isbutton }) => {
     return (
-        <div className={`flex flex-col ${mainColor ? "bg-[#219D80]" : "bg-[#EDF7F5]"} bg-[#219D80] p-5 py-8`}>
+        <div className={`sm:inline ${!isbutton && !mainColor ? "hidden" : ""} flex  flex-col ${mainColor ? "bg-[#219D80]" : "bg-[#EDF7F5]"} bg-[#219D80] p-5 py-8`}>
             <div className="flex">
                 <div className={`rounded-full p-5 md:p-10   ${mainColor ? "bg-[#EDF7F5]" : "bg-white"}`}>
                     {icon}

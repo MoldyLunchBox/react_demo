@@ -16,7 +16,7 @@ export const OurMission = () => {
                  text-lg  '>
                     Our mission
                 </h2>
-                <hr class="w-10 h-px mx-2 bg-gray-200 border-0 dark:bg-gray-700"></hr>
+                <hr className="w-10 h-px mx-2 bg-gray-200 border-0 dark:bg-gray-700"></hr>
             </div>
             <h2 className='mx-2 playFairFont text-4xl font-medium'>
                 Save Jeans. Save Lives

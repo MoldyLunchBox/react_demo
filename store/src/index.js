@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import { Header } from './component/Header';
 import { Footer } from './component/Footer';
+import { UnderConstructionPage } from './component/UnderConstructionPage';
 
 const Layout = () => {
   return (
@@ -33,11 +34,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/category/:id",
-        element: <div>Category</div>,
+        element: <UnderConstructionPage />,
       },
       {
         path: "/product/:id",
-        element: <div>Product</div>
+        element: <UnderConstructionPage />
       },
     ]
   },

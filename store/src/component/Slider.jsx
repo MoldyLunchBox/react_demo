@@ -20,12 +20,12 @@ export const Slider = () => {
     }
 
     return (
-        <div className="relative flex justify-center items-center overflow-hidden  w-full h-full bg-red-200">
+        <div className="relative flex justify-center items-center overflow-hidden  w-full h-full">
 
             <div className='flex flex-row img-slider w-full transition-transform ease-out duration-500  h-full ' style={{ transform: `translate(-${currentIndex * 100}%)` }}>
-                {images.map((image) => {
-                    return <img
-                        key={image}
+                {images.map((image, index) => {
+                    return <img  
+                        key={index}
                         src={image}
                         alt={`Slide ${currentIndex}`}
                         className=" "
@@ -45,7 +45,7 @@ export const Slider = () => {
             <div className="absolute bottom-4 left-0 right-0">
                 <div className="flex justify-center items-center gap-2">
                     {images.map((_, i) => (
-                        <div className={`w-3 h-3 bg-black border-2 border-white rounded-full ${i == currentIndex ? "p-2" : "bg-opacity-50"}`}>
+                        <div key={i} className={`w-3 h-3 bg-black border-2 border-white rounded-full ${i == currentIndex ? "p-2" : "bg-opacity-50"}`}>
 
                         </div>
                     ))}

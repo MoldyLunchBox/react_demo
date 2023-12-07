@@ -22,10 +22,10 @@ export const Header = () => {
                 </div>
                 <div className={`nav-links md:static fixed bg-white min-h-fit  left-0 top-[-100%] md:w-auto w-full flex items-center px-5 transition-transform duration-500 z-50 ${showMenu ? 'top-[80px]' : 'top-[-100%]'}`}>
                     <ul className='flex md:flex-row flex-col md:items-center lg:gap-8 gap-4'>
-                        <Link to="/product/1">Vintage Women</Link>
-                        <Link to="/product/2">Vintage Men</Link>
-                        <Link to="/product/3">Jeans under €30 / £30</Link>
-                        <Link to="/product/4">Levi's Jeans</Link>
+                        <Link className='worksElements' to="/product/1">Vintage Women</Link>
+                        <Link className='worksElements' to="/product/2">Vintage Men</Link>
+                        <Link className='worksElements' to="/product/3">Jeans under €30 / £30</Link>
+                        <Link className='worksElements' to="/product/4">Levi's Jeans</Link>
                     </ul>
                 </div>
                 <div className='flex items-center gap-6'>

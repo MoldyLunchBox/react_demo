@@ -75,10 +75,26 @@
 }
 
 
-.img-slider img {
-  display: block;
-  max-width:1000px;
-  max-height:681px;
-  width: auto;
-  height: auto;
+.worksElements {
+  position: relative;
+  overflow: hidden;
+  transition: all 1s ease;
+}
+
+.worksElements::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%; /* Set the initial position to the center */
+  transform: translateX(-50%); /* Move the element to the left by 50% of its width */
+  width: 0;
+  height: 2px;
+  background-color: #ffffff;
+  transition: width 1s ease;
+  transform-origin: left;
+}
+
+.worksElements:hover::before {
+  width: 100%;
+  background-color: black;
 }
