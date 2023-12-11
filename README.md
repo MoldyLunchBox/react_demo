@@ -3,14 +3,67 @@ Implement the homepage design: Use Strapi.io hosted platform and Develop the use
 Responsive design: Ensure that the website is responsive and provides an optimal user experience across different devices and screen sizes.
 
 
+# Project Name
 
-HOST=0.0.0.0
-PORT=1337
-APP_KEYS=uF/Bq06wPAp+m9plKw6tEQ==,1rT7ivXLChWAIEry+TYOlA==,1RcRJhNVJ6pkGVF2nwo0Rw==,7xXxiAiBaY+vzUiaIssvBA==
-API_TOKEN_SALT=smA8iTnNT6qpAD1pr4dM+w==
-ADMIN_JWT_SECRET=Llk9ueKBQEde6KOTDpqCaA==
-TRANSFER_TOKEN_SALT=FFdzG2yTB57aZuJfBDMIVw==
-# Database
-DATABASE_CLIENT=sqlite
-DATABASE_FILENAME=.tmp/data.db
-JWT_SECRET=4PZccYM1csTmA21909YqZA==
+Description of your project.
+
+## Getting Started
+
+These instructions will help you set up and run the API and frontend of the project on your local machine.
+
+### Prerequisites
+
+- Node.js and npm must be installed on your machine.
+
+### Running the API
+
+1. Navigate to the `api` directory:
+
+    ```bash
+    cd api
+    ```
+
+2. Install the required dependencies:
+
+    ```bash
+    npm install
+    ```
+
+3. Run the development server:
+
+    ```bash
+    npm run develop
+    ```
+
+The API should now be running at `http://localhost:3000`.
+
+### Running the Frontend
+
+1. Navigate to the `store` directory:
+
+    ```bash
+    cd store
+    ```
+
+2. Install the required dependencies:
+
+    ```bash
+    npm install
+    ```
+
+3. Start the frontend:
+
+    ```bash
+    npm run start
+    ```
+
+The frontend should now be accessible at `http://localhost:8080`.
+
+## Contributing
+
+If you'd like to contribute to this project, please follow our [contribution guidelines](CONTRIBUTING.md).
+
+## License
+
+This project is licensed under the [License Name] - see the [LICENSE.md](LICENSE.md) file for details.
+
