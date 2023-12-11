@@ -35,7 +35,7 @@ These instructions will help you set up and run the API and frontend of the proj
     npm run develop
     ```
 
-The API should now be running at `http://localhost:3000`.
+The API should now be running at `http://localhost:1337`.
 
 ### Running the Frontend
 
@@ -57,7 +57,7 @@ The API should now be running at `http://localhost:3000`.
     npm run start
     ```
 
-The frontend should now be accessible at `http://localhost:8080`.
+The frontend should now be accessible at `http://localhost:3000`.
 
 ## Contributing
 
